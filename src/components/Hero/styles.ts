@@ -10,9 +10,32 @@ export const HeroContainer = styled.section`
         flex-direction: column;
         gap: 3rem;
         h1 {
-            width: 300px;
-            /* margin-bottom: 3rem; */
-            margin-right: 2rem;
+            position: relative;
+            margin-right: 12rem;
+
+            img {
+                position: absolute;
+                border-radius: 1rem;
+                width: 200px;
+                border: 2px solid #fff;
+                transition: transform 2s 1s;
+            }
+
+            &.active {
+                img {
+                    &:nth-child(1) {
+                        transform: rotate(-30deg) translateX(-100%);
+                    }
+                    &:nth-child(2) {
+                        /* transform: rotate(30deg) translateX(100%); */
+                        z-index: 2;
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(30deg) translateX(100%);
+                        z-index: 1;
+                    }
+                }
+            }
         }
 
         h2 {
@@ -23,6 +46,7 @@ export const HeroContainer = styled.section`
             font-size: 2rem;
             letter-spacing: 3px;
             line-height: 3rem;
+            margin-top: 20rem;
         }
 
         i {

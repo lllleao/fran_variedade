@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const CardContainer = styled.div`
-    cursor: pointer;
     padding: 1rem;
     max-width: 300px;
     border-radius: 1rem;
@@ -11,7 +10,7 @@ export const CardContainer = styled.div`
     transition: border-color 0.5s;
 
     &:hover {
-        border-color: #07b4fa;
+        border-color: #fa8d00;
     }
     &:hover .front {
         opacity: 0;
@@ -42,13 +41,14 @@ export const CardContainer = styled.div`
         margin: 0.5rem 0;
         display: flex;
         justify-content: space-between;
+        font-size: 1.2rem;
         h5 {
             font-weight: normal;
             margin-bottom: 0.5rem;
         }
 
         span {
-            font-size: 0.9rem;
+            /* font-size: 1rem; */
         }
     }
 
