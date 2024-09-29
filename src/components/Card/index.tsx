@@ -1,19 +1,23 @@
-import mugProf1 from '../../assets/prof.png'
 import Button from '../Button'
 import { CardContainer } from './styles'
-const Card = () => {
+
+type Props = {
+    img: string
+    title: string
+    price: string
+    description: string
+}
+
+const Card = ({ img, title, price, description }: Props) => {
     return (
         <CardContainer>
-            <img srcSet={mugProf1} alt="" />
+            <img srcSet={img} alt="" />
             <div className="price">
-                <h5>Kit Caneca Almofada</h5>
-                <span>R$ 19,90</span>
+                <h5>{title}</h5>
+                <span>R$ {price}</span>
             </div>
-            <p className="desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-                eum asperiores placeat
-            </p>
-            <Button />
+            <p className="desc">{description}</p>
+            <Button>Adicionar ao carrinho</Button>
         </CardContainer>
     )
 }

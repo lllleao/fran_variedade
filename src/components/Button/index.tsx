@@ -1,7 +1,9 @@
 import { ButtonContainer } from './styles'
-
-const Button = () => {
-    return <ButtonContainer>Adicionar ao carrinho</ButtonContainer>
+type Props = {
+    children: string
+}
+const Button = ({ children }: Props) => {
+    return <ButtonContainer>{children}</ButtonContainer>
 }
 
 export default Button

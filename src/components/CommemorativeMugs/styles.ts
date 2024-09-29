@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ButtonContainer } from '../Button/styles'
 
 export const CommemorativeContainer = styled.div`
     h4 {
@@ -12,5 +13,8 @@ export const CommemorativeContainer = styled.div`
         flex-wrap: wrap;
         justify-content: center;
         gap: 2rem;
+    }
+    & > ${ButtonContainer} {
+        margin-left: 2rem;
     }
 `
