@@ -16,7 +16,7 @@ export const HeroContainer = styled.section`
             img {
                 position: absolute;
                 border-radius: 1rem;
-                width: 200px;
+                max-width: 200px;
                 border: 2px solid #fff;
                 transition: transform 2s 1s;
             }

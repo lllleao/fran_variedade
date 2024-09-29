@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
     .container {
         max-width: 1024px; //1344px
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
     }
 
