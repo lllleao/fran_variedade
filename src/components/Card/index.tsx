@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import Button from '../Button'
+import Overlay from '../Overlay'
 import { CardContainer } from './styles'
 
 type Props = {
@@ -9,16 +11,26 @@ type Props = {
 }
 
 const Card = ({ img, title, price, description }: Props) => {
+    const [isZoom, setIsZoom] = useState(false)
+
     return (
-        <CardContainer>
-            <img srcSet={img} alt="" />
-            <div className="price">
-                <h5>{title}</h5>
-                <span>R$ {price}</span>
-            </div>
-            <p className="desc">{description}</p>
-            <Button>Adicionar ao carrinho</Button>
-        </CardContainer>
+        <>
+            <Overlay
+                zoom={isZoom}
+                titleSection="Dia dos professores"
+                img={img}
+                setIsZoom={setIsZoom}
+            />
+            <CardContainer>
+                <img onClick={() => setIsZoom(true)} srcSet={img} alt="" />
+                <div className="price">
+                    <h5>{title}</h5>
+                    <span>R$ {price}</span>
+                </div>
+                <p className="desc">{description}</p>
+                <Button>Adicionar ao carrinho</Button>
+            </CardContainer>
+        </>
     )
 }
 

@@ -12,29 +12,15 @@ export const CardContainer = styled.div`
     &:hover {
         border-color: #fa8d00;
     }
-    &:hover .front {
-        opacity: 0;
-    }
-    &:hover .back {
-        opacity: 1;
-    }
 
-    .front,
-    .back {
-        transition: opacity 0.5s ease;
-    }
-    .front {
-        opacity: 1;
-    }
-
-    .back {
-        top: 1rem;
-        left: 0;
-        position: absolute;
-        opacity: 0;
-    }
     img {
         width: 100%;
+        cursor: zoom-in;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     .price {
@@ -45,10 +31,6 @@ export const CardContainer = styled.div`
         h5 {
             font-weight: normal;
             margin-bottom: 0.5rem;
-        }
-
-        span {
-            /* font-size: 1rem; */
         }
     }
 
