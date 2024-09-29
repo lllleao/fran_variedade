@@ -21,7 +21,7 @@ const Hero = () => {
                     Celebre cada ocasião com presentes que falam ao coração!
                 </h2>
                 <a href="#mugs">
-                    <i className="fa-solid fa-chevron-down"></i>
+                    <i className="fa-solid fa-chevron-down" />
                 </a>
             </div>
         </HeroContainer>

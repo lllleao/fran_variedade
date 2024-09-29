@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { HeaderContainer, NavBar } from './styles'
+import { HeaderContainer, MugsDrop, NavBar } from './styles'
 
 const Header = () => {
     const [isActive, setIsActive] = useState({
@@ -48,26 +48,40 @@ const Header = () => {
                         <li>
                             <a
                                 onClick={() => handleActive('home')}
-                                className={isActive.home ? 'is-active' : ''}
+                                className={`${isActive.home ? 'is-active' : ''} item-nav`}
                                 href="#home"
                             >
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a
+                            <MugsDrop
                                 href="#mugs"
                                 onClick={() => handleActive('mugs')}
-                                className={isActive.mugs ? 'is-active' : ''}
+                                className={`${isActive.mugs ? 'is-active' : ''} item-nav`}
                             >
                                 Canecas
-                            </a>
+                                <i className="fa-solid fa-chevron-down"></i>
+                                <nav>
+                                    <ul className="mug-drop">
+                                        <li>
+                                            <a href="#">Dia dos professores</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Dia dos professores</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Dia dos professores</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </MugsDrop>
                         </li>
                         <li>
                             <a
                                 href="#custom"
                                 onClick={() => handleActive('custom')}
-                                className={isActive.custom ? 'is-active' : ''}
+                                className={`${isActive.custom ? 'is-active' : ''} item-nav`}
                             >
                                 Personalizavés
                             </a>
@@ -76,9 +90,7 @@ const Header = () => {
                             <a
                                 href="#accessories"
                                 onClick={() => handleActive('accessories')}
-                                className={
-                                    isActive.accessories ? 'is-active' : ''
-                                }
+                                className={`${isActive.accessories ? 'is-active' : ''} item-nav`}
                             >
                                 Acessórios
                             </a>

@@ -17,12 +17,12 @@ export const HeaderContainer = styled.header`
 export const NavBar = styled.nav`
     ul {
         display: flex;
+        align-items: center;
 
         li {
             margin-right: 1rem;
-            /* padding: 0.5rem 1rem; */
 
-            a {
+            .item-nav {
                 position: relative;
                 text-decoration: none;
                 cursor: pointer;
@@ -42,6 +42,35 @@ export const NavBar = styled.nav`
                 &.is-active::after {
                     width: 100%;
                 }
+            }
+        }
+    }
+`
+export const MugsDrop = styled.a`
+    display: inline-block;
+    height: min-content;
+
+    i {
+        margin-left: 0.5rem;
+    }
+
+    .mug-drop {
+        overflow: hidden;
+        display: none;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        background-color: #f04a6a;
+        display: flex;
+        flex-direction: column;
+        /* padding: 0.5rem 1rem; */
+        padding: 0;
+        height: 0;
+
+        li {
+            margin-bottom: 0.9rem;
+            a {
+                text-decoration: none;
             }
         }
     }

@@ -35,7 +35,9 @@ export const CardContainer = styled.div`
     }
 
     .desc {
-        text-align: center;
+        /* text-align: center; */
         letter-spacing: 2px;
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
     }
 `

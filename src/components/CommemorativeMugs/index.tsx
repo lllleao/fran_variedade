@@ -15,37 +15,37 @@ const CommemorativeMugs = () => {
             <div className="mugs">
                 <Card
                     img={mugProf1}
-                    description="Caneca de polimero trez vezes aumentado"
+                    description="Caneca de porcelana 325ml"
                     title="Caneca personalizada"
                     price="23,99"
                 />
                 <Card
                     img={mugProf2}
-                    description="Caneca de polimero trez vezes aumentado"
+                    description="Caneca de porcelana 325ml"
                     title="Caneca personalizada"
                     price="23,99"
                 />
                 <Card
                     img={mugProf3}
-                    description="Caneca de polimero trez vezes aumentado"
+                    description="Caneca de porcelana 325ml"
                     title="Caneca personalizada"
                     price="23,99"
                 />
                 <Card
                     img={mugProf4}
-                    description="Caneca de polimero trez vezes aumentado"
+                    description="Caneca de porcelana 325ml"
                     title="Caneca personalizada"
                     price="23,99"
                 />
                 <Card
                     img={mugProf5}
-                    description="Caneca de polimero trez vezes aumentado"
+                    description="Caneca de porcelana 325ml"
                     title="Caneca personalizada"
                     price="23,99"
                 />
                 <Card
                     img={mugProf6}
-                    description="Caneca de polimero trez vezes aumentado"
+                    description="Caneca de porcelana 325ml"
                     title="Caneca personalizada"
                     price="23,99"
                 />

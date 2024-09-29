@@ -7,6 +7,7 @@ const Mugs = () => {
             <div className="container">
                 <h3>Canecas únicas para momentos especiais!</h3>
                 <CommemorativeMugs />
+                <CommemorativeMugs />
             </div>
         </MugSection>
     )
