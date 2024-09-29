@@ -20,16 +20,28 @@ export const NavBar = styled.nav`
 
         li {
             margin-right: 1rem;
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            text-shadow: 3px 3px 5px #000;
-
-            &:nth-child(1) {
-                border-bottom: 2px solid #ffadad;
-            }
+            /* padding: 0.5rem 1rem; */
 
             a {
+                position: relative;
                 text-decoration: none;
+                cursor: pointer;
+                padding: 0.5rem 1rem;
+                text-shadow: 3px 3px 5px #000;
+                &::after {
+                    transition: width 0.3s;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    width: 0;
+                    background-color: #ffadad;
+                }
+
+                &.is-active::after {
+                    width: 100%;
+                }
             }
         }
     }
