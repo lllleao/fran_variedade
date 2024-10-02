@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 import { ButtonContainer } from '../Button/styles'
 
-export const CommemorativeContainer = styled.div`
-    margin-top: 2rem;
-    h4 {
+export const CustomSectionContainer = styled.section`
+    padding-top: 8rem;
+    h3 {
+        text-align: center;
+        font-size: 1.5rem;
         font-weight: normal;
-        font-size: 1.3rem;
         text-transform: uppercase;
         margin-bottom: 2rem;
     }
+
     .mugs {
         display: flex;
         flex-wrap: wrap;

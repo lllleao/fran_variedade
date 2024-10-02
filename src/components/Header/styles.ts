@@ -19,10 +19,10 @@ export const NavBar = styled.nav`
         display: flex;
         align-items: center;
 
-        li {
+        .item-nav {
             margin-right: 1rem;
 
-            .item-nav {
+            .item-nav-link {
                 position: relative;
                 text-decoration: none;
                 cursor: pointer;
@@ -46,31 +46,49 @@ export const NavBar = styled.nav`
         }
     }
 `
-export const MugsDrop = styled.a`
-    display: inline-block;
-    height: min-content;
+export const MugsDrop = styled.div<{ $newHeight: number | undefined }>`
+    /* display: inline-block; */
+    /* height: min-content; */
 
     i {
         margin-left: 0.5rem;
+        font-size: 1rem;
     }
 
-    .mug-drop {
-        overflow: hidden;
-        display: none;
-        position: absolute;
-        top: 3rem;
-        left: 0;
-        background-color: #f04a6a;
-        display: flex;
-        flex-direction: column;
-        /* padding: 0.5rem 1rem; */
-        padding: 0;
-        height: 0;
+    .nav-menu-drop {
+        .nav-menu-drop-list {
+            overflow: hidden;
+            text-align: center;
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            right: 0;
+            background-color: #f04a6a;
+            display: flex;
+            flex-direction: column;
+            height: 0;
+            transition:
+                height 0.3s,
+                overflow 0.3s;
+            li {
+                width: 100%;
+                a {
+                    display: block;
+                    width: 100%;
+                    text-decoration: none;
+                    padding: 0.5rem;
+                    transition: background-color 0.3s;
 
-        li {
-            margin-bottom: 0.9rem;
-            a {
-                text-decoration: none;
+                    &:hover {
+                        background-color: #c51d3e;
+                    }
+                }
+            }
+            &--is-open {
+                height: ${({ $newHeight }) => $newHeight}px;
+                transition:
+                    height 0.3s,
+                    overflow 0.3s;
             }
         }
     }

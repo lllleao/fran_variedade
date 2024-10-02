@@ -1,13 +1,29 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { HeaderContainer, MugsDrop, NavBar } from './styles'
 
+type MenuDropProps = {
+    isOpen: boolean
+    menuHeight?: number
+}
+
 const Header = () => {
+    const menuDropRef = useRef<HTMLUListElement>(null)
     const [isActive, setIsActive] = useState({
         home: true,
         mugs: false,
         custom: false,
         accessories: false
     })
+    const [menuIsOpen, setMenuIsOpen] = useState<MenuDropProps>({
+        isOpen: false,
+        menuHeight: 0
+    })
+
+    const getHeighMenu = () => {
+        if (menuDropRef.current) {
+            return menuDropRef.current.scrollHeight
+        }
+    }
 
     const handleActive = (element: string) => {
         if (element === 'home') {
@@ -17,19 +33,32 @@ const Header = () => {
                 custom: false,
                 accessories: false
             })
-        } else if (element === 'mugs') {
+            setMenuIsOpen({
+                isOpen: false,
+                menuHeight: 0
+            })
+        } else if (element === 'custom') {
             setIsActive({
                 home: false,
                 mugs: true,
                 custom: false,
                 accessories: false
             })
-        } else if (element === 'custom') {
+            setMenuIsOpen({
+                isOpen: !menuIsOpen.isOpen,
+                menuHeight: getHeighMenu()
+            })
+            console.log('ooiioio')
+        } else if (element === 'acess') {
             setIsActive({
                 home: false,
                 mugs: false,
                 custom: true,
                 accessories: false
+            })
+            setMenuIsOpen({
+                isOpen: false,
+                menuHeight: 0
             })
         } else {
             setIsActive({
@@ -38,6 +67,10 @@ const Header = () => {
                 custom: false,
                 accessories: true
             })
+            setMenuIsOpen({
+                isOpen: false,
+                menuHeight: 0
+            })
         }
     }
     return (
@@ -45,58 +78,54 @@ const Header = () => {
             <div className="container">
                 <NavBar>
                     <ul>
-                        <li>
+                        <li className="item-nav">
                             <a
                                 onClick={() => handleActive('home')}
-                                className={`${isActive.home ? 'is-active' : ''} item-nav`}
+                                className={`${isActive.home ? 'is-active' : ''} item-nav-link`}
                                 href="#home"
                             >
                                 Home
                             </a>
                         </li>
-                        <li>
+                        <li className="item-nav">
                             <MugsDrop
-                                href="#mugs"
-                                onClick={() => handleActive('mugs')}
-                                className={`${isActive.mugs ? 'is-active' : ''} item-nav`}
+                                onClick={() => handleActive('custom')}
+                                className={`${isActive.mugs ? 'is-active' : ''} item-nav-link`}
+                                $newHeight={menuIsOpen.menuHeight}
                             >
-                                Canecas
+                                Personalizavés
                                 <i className="fa-solid fa-chevron-down"></i>
-                                <nav>
-                                    <ul className="mug-drop">
+                                <nav className="nav-menu-drop">
+                                    <ul
+                                        className={`nav-menu-drop-list ${menuIsOpen.isOpen ? 'nav-menu-drop-list--is-open' : ''}`}
+                                        ref={menuDropRef}
+                                    >
                                         <li>
-                                            <a href="#">Dia dos professores</a>
+                                            <a href="#mugs">Canecas</a>
                                         </li>
                                         <li>
-                                            <a href="#">Dia dos professores</a>
+                                            <a href="#cushion">Almofadas</a>
                                         </li>
                                         <li>
-                                            <a href="#">Dia dos professores</a>
+                                            <a href="#">Camisas</a>
                                         </li>
                                     </ul>
                                 </nav>
                             </MugsDrop>
                         </li>
-                        <li>
+                        <li className="item-nav">
                             <a
                                 href="#custom"
-                                onClick={() => handleActive('custom')}
-                                className={`${isActive.custom ? 'is-active' : ''} item-nav`}
-                            >
-                                Personalizavés
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#accessories"
-                                onClick={() => handleActive('accessories')}
-                                className={`${isActive.accessories ? 'is-active' : ''} item-nav`}
+                                onClick={() => handleActive('acess')}
+                                className={`${isActive.custom ? 'is-active' : ''} item-nav-link`}
                             >
                                 Acessórios
                             </a>
                         </li>
-                        <li>
-                            <a href="">Carrinho</a>
+                        <li className="item-nav">
+                            <a href="#">
+                                <i className="fa-solid fa-cart-shopping"></i>
+                            </a>
                         </li>
                     </ul>
                 </NavBar>

@@ -1,12 +1,21 @@
+import CustomSection from '../../components/CustomSection'
 import Hero from '../../components/Hero'
-import Mugs from '../../components/Mugs'
 import { MainContainer } from './styles'
 
 const Main = () => {
     return (
         <MainContainer>
             <Hero />
-            <Mugs />
+            <div className="container">
+                <CustomSection
+                    idSection="mugs"
+                    title="Canecas únicas para momentos especiais!"
+                />
+                <CustomSection
+                    idSection="cushion"
+                    title="Encontre seu personalizável especial"
+                />
+            </div>
         </MainContainer>
     )
 }

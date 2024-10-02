@@ -28,7 +28,7 @@ const Card = ({ img, title, price, description }: Props) => {
                     <span>R$ {price}</span>
                 </div>
                 <p className="desc">{description}</p>
-                <Button>Adicionar ao carrinho</Button>
+                <Button>Ver catálogo completo</Button>
             </CardContainer>
         </>
     )
