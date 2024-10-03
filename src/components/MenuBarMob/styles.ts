@@ -30,25 +30,25 @@ export const MenuItems = styled.ul`
 export const Arrow = styled.div`
     cursor: pointer;
     position: fixed;
-    left: 0.5rem;
-    top: 0.5rem;
+    left: 0.6rem;
+    top: 0.6rem;
     z-index: 5;
     .arrow {
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #f58171;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border-radius: 12%;
-        padding-top: 10px;
+        padding-top: 6px;
 
         .arrow-item {
             display: block;
             background-color: #fff;
             width: 28px;
-            height: 5px;
-            border-radius: 8px;
+            height: 4px;
+            border-radius: 6px;
             transition:
                 transform 0.3s,
                 opacity 0.3s;
@@ -61,7 +61,7 @@ export const Arrow = styled.div`
         &-is--active {
             .arrow-item {
                 &:nth-child(1) {
-                    transform: translate(0px, 13px) rotate(45deg);
+                    transform: translate(-1px, 11px) rotate(45deg);
                 }
 
                 &:nth-child(2) {
