@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeaderContainer = styled.header`
+export const MenuBarContainer = styled.header`
     background-color: #b6465a;
     position: fixed;
     z-index: 4;
@@ -10,6 +10,7 @@ export const HeaderContainer = styled.header`
         display: flex;
         justify-content: center;
     }
+
     img {
         width: 90px;
     }
