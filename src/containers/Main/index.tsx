@@ -1,3 +1,4 @@
+import Contact from '../../components/Contact'
 import CustomSection from '../../components/CustomSection'
 import Hero from '../../components/Hero'
 import { MainContainer } from './styles'
@@ -15,6 +16,7 @@ const Main = () => {
                     idSection="cushion"
                     title="Encontre seu personalizável especial"
                 />
+                <Contact />
             </div>
         </MainContainer>
     )

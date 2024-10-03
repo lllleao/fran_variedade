@@ -13,6 +13,10 @@ export const HeaderContainer = styled.header`
     img {
         width: 90px;
     }
+
+    @media (max-width: 482px) {
+        display: none;
+    }
 `
 export const NavBar = styled.nav`
     ul {
