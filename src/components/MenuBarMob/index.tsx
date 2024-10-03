@@ -29,7 +29,7 @@ const MenuBarMob = () => {
                         </li>
                         <li className="nav-bar-mob-item">
                             <a className="nav-bar-mob-item-link" href="#">
-                                Personalizavés
+                                Personalizáveis
                             </a>
                         </li>
                         <li className="nav-bar-mob-item">

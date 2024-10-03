@@ -93,7 +93,7 @@ const MenuBar = () => {
                                 className={`${isActive.mugs ? 'is-active' : ''} item-nav-link`}
                                 $newHeight={menuIsOpen.menuHeight}
                             >
-                                Personalizavés
+                                Personalizáveis
                                 <i className="fa-solid fa-chevron-down"></i>
                                 <nav className="nav-menu-drop">
                                     <ul
@@ -124,7 +124,7 @@ const MenuBar = () => {
                         </li>
                         <li className="item-nav">
                             <a href="#">
-                                <i className="fa-solid fa-cart-shopping"></i>
+                                <i className="fa-solid fa-cart-shopping" />
                             </a>
                         </li>
                     </ul>
