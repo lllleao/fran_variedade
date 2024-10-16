@@ -3,14 +3,7 @@ import Button from '../Button'
 import Overlay from '../Overlay'
 import { CardContainer } from './styles'
 
-type Props = {
-    img: string
-    title: string
-    price: string
-    description: string
-}
-
-const Card = ({ img, title, price, description }: Props) => {
+const Card = ({ img, title, price, description, id }: Product) => {
     const [isZoom, setIsZoom] = useState(false)
 
     return (

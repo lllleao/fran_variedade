@@ -5,7 +5,7 @@ const Links = () => {
         <LinksContainer>
             <li className="social-links__item">
                 <a
-                    href="instagram.com/franvariedades2016/"
+                    href="https://instagram.com/franvariedades2016/"
                     target="_blank"
                     rel="noreferrer"
                     className="social-links__item__link"
